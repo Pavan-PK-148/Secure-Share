@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables (CRITICAL: Never commit keys)
+.env
+.env.local
+.env.production
+
+# Runtime data & Uploads
+# This ignores all files inside uploads, but keeps the folder because of the !.gitkeep rule
+uploads/*
+!uploads/.gitkeep
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store

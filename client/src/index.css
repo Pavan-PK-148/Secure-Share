@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+:root {
+--color-cream: #FDFBF7;
+--color-sage: #2C4A3E;
+--color-mint: #A3E6B5;
+--color-mint-light: #E2F5E9;
+--color-charcoal: #1F2937;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--color-cream);
+color: var(--color-charcoal);
+font-family: Inter, sans-serif;
+overflow-x: hidden;
+}
+
+/* Beautiful Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+background: rgba(44, 74, 62, 0.5);
+border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgba(44, 74, 62, 0.8);
+}
+
+/* Selection */
+::selection {
+background: var(--color-sage);
+color: white;
+}
+
+/* Utility Classes */
+.bg-cream {
+background: var(--color-cream);
+}
+
+.bg-sage {
+background: var(--color-sage);
+}
+
+.text-sage {
+color: var(--color-sage);
+}
+
+.bg-mint {
+background: var(--color-mint);
+}
+
+.bg-mint-light {
+background: var(--color-mint-light);
+}
+
+.text-charcoal {
+color: var(--color-charcoal);
+}
+
+.border-sage {
+border-color: var(--color-sage);
+}
+
+/* Glassmorphism */
+.glass {
+background: rgba(255, 255, 255, 0.72);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Gradient Glow */
+.hero-glow {
+position: absolute;
+inset: 0;
+overflow: hidden;
+pointer-events: none;
+}
+
+.hero-glow::before,
+.hero-glow::after {
+content: "";
+position: absolute;
+width: 500px;
+height: 500px;
+border-radius: 999px;
+filter: blur(90px);
+opacity: 0.25;
+}
+
+.hero-glow::before {
+background: #A3E6B5;
+top: -120px;
+left: -100px;
+}
+
+.hero-glow::after {
+background: #2C4A3E;
+bottom: -150px;
+right: -120px;
+}
+
+/* Floating Animation */
+@keyframes float {
+0%,100% {
+transform: translateY(0px);
+}
+
+50% {
+transform: translateY(-12px);
+}
+}
+
+.animate-float {
+animation: float 6s ease-in-out infinite;
+}
