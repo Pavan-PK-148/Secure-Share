@@ -24,7 +24,6 @@ const calculateExpiryDate = (expiryString) => {
   if (unit === 'h') {
     now.setHours(now.getHours() + amount);
   } else if (unit === 'd') {
-    // FIXED: Use setDate + getDate to prevent mathematical boundary overflow errors inside node runtimes
     now.setDate(now.getDate() + amount);
   }
   return now;
